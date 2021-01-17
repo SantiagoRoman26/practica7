@@ -16,7 +16,7 @@ $(document).ready(function () {
                         <th>${task.nombres}</th>
                         <th>${task.apellidos}</th>
                         <th><button class="task-delete btn btn-primary">Editar</button></th>
-                        <th><button class="task-delete btn btn-danger data-toggle="modal" data-target="#modal2">Eliminar</button></th>
+                        <th><button class="task-delete btn btn-danger data-toggle="modal" data-target="#mymodal2">Eliminar</button></th>
                     </tr>
                     `
                 });
@@ -57,7 +57,7 @@ $(document).ready(function () {
             $('#taskId').val(task.id);
             modificar = true;
         });
-        $('#modal1').modal('show');
+        $('#mymodal1').modal('show');
     }); 
     
 });
