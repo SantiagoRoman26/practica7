@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/crud1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+		crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+		<br>
+		<div align="right" style="margin-bottom:5px;">
+			<button type="button" data-toggle="modal" data-target="#modal1" class="btn btn-success btn-xs">Add</button>
+		</div>
+		<br />
+	</div>
+
+
+	<div class="modal" tabindex="-1" role="dialog" id="modal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">ADD DATA</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="task-form">
+						<div class="form-group">
+							<label for="nombres">Nombre</label>
+							<input type="text" class="form-control" id="nombres" placeholder="Ingrese el nombre">
+						</div>
+						<div class="form-group">
+							<label for="apellidos">Apellido</label>
+							<input type="text" class="form-control" id="apellidos" placeholder="apellido">
+						</div>
+						<input type="hidden" id="taskId">
+						<button type="submit" class="btn btn-primary">Insertar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal" tabindex="-1" role="dialog" id="modal2">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Estas seguro que desea Eliminar</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+					<button data-dismiss="modal" class="task-delete btn btn-primary">Eliminar</button>
+				</div>
+			</div>
+		</div>
+    </div>
+    
+
+    <div class="container">
+
+        
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                
+            </thead>
+            <tbody id="listado">
+                <tr >
+                    <th><a href="#" class="task-item">1</a></th>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th><button class="task-update btn btn-primary">Editar</button></th>
+                    <th><button class=" btn btn-danger "data-toggle="modal" data-target="#modal2">Eliminar</button></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
